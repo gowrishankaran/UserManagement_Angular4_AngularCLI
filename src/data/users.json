@@ -1,0 +1,12 @@
+[
+	{"id":1,"firstName":"Gowri","lastName":"Shankar","sex":"Male","age":"27","maritialstatus":"Single","email":"gowrishankaran08@gmail.com","mobile":9843129347,"designation":"Web Developer", "city":"TamilNadu","country":"India"},
+	{"id":2,"firstName":"Krishna","lastName":"Karthick","sex":"Male","age":"27","maritialstatus":"Single","email":"Krishna@gmail.com","mobile":7877698453,"designation":"Web Developer", "city":"CA","country":"US"},
+	{"id":3,"firstName":"Siddharth","lastName":"Singh","sex":"Male","age":"27","maritialstatus":"Single","email":"sid@gmail.com","mobile":9857698453,"designation":"Web Developer", "city":"Bangalore","country":"India"},
+	{"id":4,"firstName":"Arjun","lastName":"Hebbar","sex":"Male","age":"27","maritialstatus":"Married","email":"Arjun@gmail.com","mobile":997698453,"designation":"Web Developer", "city":"Bangalore","country":"India"},
+	{"id":5,"firstName":"Prakkash","lastName":"Subramanian","sex":"Male","age":"27","maritialstatus":"Single","email":"prakkash@gmail.com","mobile":9857698453,"designation":"Web Developer", "city":"TamilNadu","country":"India"},
+	{"id":6,"firstName":"Madhu","lastName":"Lakshmi","sex":"Female","age":"27","maritialstatus":"Married","email":"madhu@gmail.com","mobile":9857698453,"designation":"Web Developer", "city":"Bangalore","country":"India"},
+	{"id":7,"firstName":"Srisha","lastName":"Thotla","sex":"Female","age":"27","maritialstatus":"Married","email":"srisha@gmail.com","mobile":9857698453,"designation":"Web Developer", "city":"Bangalore","country":"India"},
+	{"id":8,"firstName":"Abhilash","lastName":"Chandrashekar","sex":"Male","age":"27","maritialstatus":"Single","email":"abhi@gmail.com","mobile":9857698453,"designation":"Web Developer", "city":"Bangalore","country":"India"},
+	{"id":9,"firstName":"Sudha","lastName":"Thangavel","sex":"Female","age":"27","maritialstatus":"Married","email":"sudha@gmail.com","mobile":9857698453,"designation":"Web Developer", "city":"TamilNadu","country":"India"},
+	{"id":10,"firstName":"Akash","lastName":"Ranjan","sex":"Male","age":"27","maritialstatus":"Single","email":"akki@gmail.com","mobile":9857698453,"designation":"Web Developer", "city":"Ranchi","country":"India"}
+]

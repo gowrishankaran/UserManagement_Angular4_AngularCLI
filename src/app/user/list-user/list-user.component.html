@@ -1,0 +1,50 @@
+
+<div class="content-wrapper">
+    <div class="container-fluid">
+      
+      <!-- Icon Cards-->
+      <div class="row">
+        <div class="col">
+         <p>User List Page</p>
+        </div> 
+      </div>
+      <div class="row">
+          <table datatable [dtOptions]="dtOptions" class="table table-bordered">
+            <thead>
+                <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Age</th>
+                  <th>Gender</th>
+                  <th>Email</th>
+                  <th>Maritial Status</th>
+                  <th>Mobile Number</th>
+                  <th>Designation</th>
+                  <th>City</th>
+                  <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of userData">
+                  <td>{{user.firstName}}</td>
+                  <td>{{user.lastName}}</td>
+                  <td>{{user.age}}</td>
+                  <td>{{user.sex}}</td>
+                  <td>{{user.email}}</td>
+                  <td>{{user.maritialStatus}}</td>
+                  <td>{{user.mobile}}</td>
+                  <td>{{user.designation}}</td>
+                  <td>{{user.city}}</td>
+                  <td>{{user.country}}</td>
+                </tr>
+            </tbody>
+          </table>
+      </div>
+
+    </div>
+  
+    <app-footer></app-footer>
+   
+    
+    
+</div>
