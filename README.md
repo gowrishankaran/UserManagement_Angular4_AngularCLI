@@ -6,13 +6,13 @@ This is the simple application to kickstart with Angular(4) Projects with proper
 
 Here, I have covered the following features which are used in the application
 
--> Routing (SPA - Single Page Application)
+-> Routing with Lazy Loader (SPA - Single Page Application)
 
 -> Module
 
 -> Component
 
--> Creted Shared Module for reusing
+-> Creted Shared Module For Reusing
 
 -> Service (HTTP Module with Observables)
 
