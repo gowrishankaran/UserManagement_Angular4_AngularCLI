@@ -3,9 +3,10 @@
 This project was generated with Angular Cli with version 1.4.2.
 
 Steps:
+
 1.Open a command prompt
 
-2.Type: `npm install'. This installs the node-module and typings dependencies
+2.Type: `npm install`. This installs the node-module and typings dependencies
 
 3.Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
