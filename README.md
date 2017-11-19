@@ -2,7 +2,7 @@
 
 This project was generated with Angular Cli with version 1.4.2.
 
-This is the simple application to kickstart with Angular(2,4..) Projects with proper folder structure (Typescript)
+This is the simple application to kickstart with Angular(4) Projects with proper folder structure (Typescript)
 
 Here, I have covered the following features which are used in the application
 
