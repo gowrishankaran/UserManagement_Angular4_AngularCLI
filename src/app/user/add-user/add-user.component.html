@@ -5,7 +5,30 @@
       <!-- Icon Cards-->
       <div class="row">
         <div class="col">
-         <p>App User Page</p>
+          <h3>Add User Page</h3>
+        </div>
+        <div class="col text-right">
+          <label>
+              Filter :
+          </label>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" name="genderFilters" [(ngModel)]="genderFilters" id="inlineRadio1" value="all">
+              <i class="fa fa-users filter-icon"></i>
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" name="genderFilters" [(ngModel)]="genderFilters" id="inlineRadio1" value="Male">
+              <i class="fa fa-male filter-icon"></i>
+            </label>
+          </div>
+          <div class="form-check form-check-inline">
+            <label class="form-check-label">
+              <input class="form-check-input" type="radio" name="genderFilters" [(ngModel)]="genderFilters" id="inlineRadio2" value="Female"> 
+              <i class="fa fa-female filter-icon"></i>
+            </label>
+          </div>
         </div> 
       </div>
 
@@ -23,7 +46,7 @@
             </div>
         </div>
 
-        <div class="col card custom-card col-3" *ngFor="let user of userLists;let i = index;">
+        <div class="col card custom-card col-3" *ngFor="let user of userLists | genderFilter:genderFilters:userListsBack;let i = index;">
           
             <div class="text-center">
               <i class="fa fa-male main-icon-size" *ngIf="user.sex === 'Male'"></i>
@@ -45,13 +68,14 @@
         </div>
        
       </div>
-      <div class="text-center">
-        Page : {{page}}
-        Limit : {{pageSize}}
-        <ngb-pagination [collectionSize]="10" [(page)]="page" [(pageSize)]="pageSize" aria-label="Default pagination"></ngb-pagination>
+      <div class="pagination-block">
+        <ngb-pagination [collectionSize]="totalUserLists" [(page)]="page" [(pageSize)]="pageSize" aria-label="Default pagination" (pageChange)="pagination()"></ngb-pagination>
       </div>
+      
 
     </div>
+
+    
   
     <app-footer></app-footer>
    

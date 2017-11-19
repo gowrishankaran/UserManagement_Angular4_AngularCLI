@@ -9,28 +9,27 @@ import { Component, OnInit, ViewChild, Renderer2 } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  @ViewChild('sidenavToggler') sidenavToggle;
+  // @ViewChild('sidenavToggler') sideNavBtnRef;
 
   public isCollapsed = true;
-
+  sideNavIcon: boolean;
 
   constructor(private renderer: Renderer2) {
-    //this.renderer.addClass(document.body, 'modal-open');
+    this.sideNavIcon = false;
   }
 
   ngOnInit() {
   }
 
   sideNavToggle() {
-  	console.log('Toggle');
-  	// console.log(this.sidenavToggle.nativeElement.style.color = 'red');
-  	// console.log(document.body.classList.toggle('sidenav-toggled'));
+    // document.body.classList.toggle('sidenav-toggled');
 
-  	document.body.classList.toggle('sidenav-toggled');
-
-  	// this.renderer.addClass(document.body, 'sidenav-toggled');
-
-  	// this.renderer.removeClass(document.body, 'sidenav-toggled');
+    if (document.body.classList.contains('sidenav-toggled')) {
+      this.renderer.removeClass(document.body, 'sidenav-toggled');
+      this.sideNavIcon = false;
+    } else {
+      this.renderer.addClass(document.body, 'sidenav-toggled');
+      this.sideNavIcon = true;
+    }
   }
-
 }

@@ -22,8 +22,7 @@
             <i *ngIf="isCollapsed == false" class="fa fa-angle-down"></i>
           </span>
         </a>
-
-        <ul class="sidenav-second-level collapse" id="collapseExample" [ngbCollapse]="isCollapsed">
+        <ul class="sidenav-second-level" [ngbCollapse]="isCollapsed">
             <li>
               <a [routerLink]="['/user','addUser']">Add User</a>
             </li>
@@ -35,10 +34,10 @@
       </li>
      
     </ul>
-    <ul class="navbar-nav sidenav-toggler">
+    <ul #sidenavToggler class="navbar-nav sidenav-toggler">
       <li class="nav-item">
-        <a #sidenavToggler class="nav-link text-center" (click)="sideNavToggle()">
-          <i class="fa fa-fw fa-angle-left"></i>
+        <a class="nav-link text-center" (click)="sideNavToggle()">
+          <i class="fa fa-fw" [ngClass]="{'fa-angle-left': !sideNavIcon, 'fa-angle-right': sideNavIcon}"></i>
         </a>
       </li>
     </ul>
@@ -56,7 +55,7 @@
         </form>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="modal" data-target="#exampleModal">
+        <a [routerLink]="['']" class="nav-link">
           <i class="fa fa-fw fa-sign-out"></i>Logout</a>
       </li>
     </ul>

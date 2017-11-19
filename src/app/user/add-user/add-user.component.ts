@@ -12,6 +12,7 @@ import { UserDataService } from '../../service/user-data.service';
 export class AddUserComponent implements OnInit {
 
   closeResult: string;
+  userListsBack: UserType[];
   userLists: UserType[];
   isEdit: boolean;
   isAddNew: boolean;
@@ -29,7 +30,8 @@ export class AddUserComponent implements OnInit {
   isCollapsed = false;
   modalRef: NgbModalRef;
   page = 1;
-  pageSize = 7; 
+  pageSize = 7;
+  totalUserLists: number;
 
 
 
@@ -45,10 +47,27 @@ export class AddUserComponent implements OnInit {
   }
 
   loadData() {
-    const data = this._userDataService.getData();
-    this.userLists = data;
-    console.log(data);
+    this.userListsBack = this._userDataService.getData();
+    this.totalUserLists = this.userListsBack.length;
+    this.userLists = this.userListsBack.slice(this.page - 1, this.pageSize);
   }
+
+  pagination() {
+    let startIndex: number =  this.page - 1;
+    let endIndex: number = this.pageSize;
+    if (this.page === 1) {
+      this.userLists = this.userListsBack.slice(startIndex, endIndex);
+    } else {
+        startIndex = (this.page * this.pageSize - this.pageSize);
+        console.log('Page = ' + this.page);
+        console.log('Page Size = ' + this.pageSize);
+        console.log('start Ind = ' + startIndex);
+        endIndex = (startIndex + this.pageSize) <= this.totalUserLists ? startIndex + this.pageSize : this.totalUserLists;
+        console.log(startIndex + '=' + endIndex + '=' + this.totalUserLists);
+        this.userLists = this.userListsBack.slice(startIndex, endIndex);
+    }
+  }
+
 
   submitRecords(form) {
     console.log('Form Values = ');
@@ -86,7 +105,7 @@ export class AddUserComponent implements OnInit {
   }
 
    /* Options for Modal */
-   modalOptions: NgbModalOptions = {
+  modalOptions: NgbModalOptions = {
     size: 'lg'
   };
 
@@ -135,6 +154,7 @@ export class AddUserComponent implements OnInit {
     });
   }
 
+ 
   private getDismissReason(reason: any): string {
     if (reason === ModalDismissReasons.ESC) {
       return 'by pressing ESC';

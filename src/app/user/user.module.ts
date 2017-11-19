@@ -9,6 +9,7 @@ import { UserRoutingModule } from './user-routing.module';
 import { AddUserComponent } from './add-user/add-user.component';
 import { UserComponent } from './user.component';
 import { ListUserComponent } from './list-user/list-user.component';
+import { GenderFilterPipe } from './add-user/gender-filter.pipe';
 
 @NgModule({
   imports: [
@@ -19,6 +20,6 @@ import { ListUserComponent } from './list-user/list-user.component';
     NgbModule,
     DataTablesModule
   ],
-  declarations: [AddUserComponent, UserComponent, ListUserComponent]
+  declarations: [AddUserComponent, UserComponent, ListUserComponent, GenderFilterPipe]
 })
 export default class UserModule { }

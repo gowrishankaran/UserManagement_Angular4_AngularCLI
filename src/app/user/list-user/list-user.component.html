@@ -5,7 +5,7 @@
       <!-- Icon Cards-->
       <div class="row">
         <div class="col">
-         <p>User List Page</p>
+         <h3>User List Page</h3>
         </div> 
       </div>
       <div class="row">
@@ -29,9 +29,12 @@
                   <td>{{user.firstName}}</td>
                   <td>{{user.lastName}}</td>
                   <td>{{user.age}}</td>
-                  <td>{{user.sex}}</td>
+                  <td class="grid-gender-icon">
+                    <span *ngIf="user.sex === 'Male'" class="fa fa-male"></span>
+                    <span *ngIf="user.sex === 'Female'" class="fa fa-female"></span>
+                  </td>
                   <td>{{user.email}}</td>
-                  <td>{{user.maritialStatus}}</td>
+                  <td>{{user.maritialstatus}}</td>
                   <td>{{user.mobile}}</td>
                   <td>{{user.designation}}</td>
                   <td>{{user.city}}</td>
